@@ -73,3 +73,27 @@ if (heroVisual && window.matchMedia('(prefers-reduced-motion: reduce)').matches 
   heroVisual.addEventListener('pointermove', (event) => { const rect = heroVisual.getBoundingClientRect(); const x = ((event.clientX - rect.left) / rect.width - .5) * 10; const y = ((event.clientY - rect.top) / rect.height - .5) * 8; heroVisual.style.setProperty('--parallax-x', `${x}px`); heroVisual.style.setProperty('--parallax-y', `${y}px`); heroVisual.style.setProperty('--mascot-x', `${x * -0.6}px`); heroVisual.style.setProperty('--mascot-y', `${y * -0.6}px`); });
   heroVisual.addEventListener('pointerleave', () => { heroVisual.style.setProperty('--parallax-x', '0px'); heroVisual.style.setProperty('--parallax-y', '0px'); heroVisual.style.setProperty('--mascot-x', '0px'); heroVisual.style.setProperty('--mascot-y', '0px'); });
 }
+
+const animationButton = document.querySelector('#animation-button');
+const mascotAnimation = document.querySelector('#mascot-animation');
+const narrationStatus = document.querySelector('#narration-status');
+if (animationButton && mascotAnimation && narrationStatus) {
+  animationButton.addEventListener('click', () => {
+    mascotAnimation.classList.remove('is-playing');
+    void mascotAnimation.offsetWidth;
+    mascotAnimation.classList.add('is-playing');
+    const slogan = '日禾田，一口好田，日日有光。';
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const voice = new SpeechSynthesisUtterance(slogan);
+      voice.lang = 'zh-TW';
+      voice.rate = 0.88;
+      voice.pitch = 1.08;
+      voice.onstart = () => { narrationStatus.textContent = '小禾正在說：' + slogan; };
+      voice.onend = () => { narrationStatus.textContent = '旁白播放完成，再按一次重播'; };
+      window.speechSynthesis.speak(voice);
+    } else {
+      narrationStatus.textContent = '此瀏覽器不支援語音旁白，動畫仍可播放';
+    }
+  });
+}
