@@ -1,0 +1,5 @@
+.mascot-intro{align-items:end;bottom:0;display:flex;left:-8%;position:absolute;z-index:3}
+.mascot-intro img{filter:drop-shadow(0 12px 8px rgba(73,48,22,.18));height:220px;object-fit:contain;width:175px}
+.mascot-intro span{background:#fffaf1;border:1px solid #dfd2bd;border-radius:2px;color:#70431f;font-family:'Noto Serif TC',serif;font-size:1rem;line-height:1.4;margin:0 0 35px -15px;padding:12px 15px;transform:rotate(-4deg)}
+.mascot-intro small{color:#66933f;font-family:'Noto Sans TC',sans-serif;font-size:.68rem}
+@media(max-width:720px){.mascot-intro{bottom:-10px;left:-8%}.mascot-intro img{height:165px;width:135px}.mascot-intro span{font-size:.8rem;margin-bottom:20px;padding:9px 11px}}

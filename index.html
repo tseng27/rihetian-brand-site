@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="日禾田｜一口好田，日日有光。台灣農特產品品牌形象網站。" />
+  <title>日禾田｜一口好田，日日有光</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mascot.css" />
+  <link rel="stylesheet" href="video.css" />
+  <link rel="stylesheet" href="interactive.css" />
+  <link rel="stylesheet" href="motion.css" />
+  <link rel="stylesheet" href="professional.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand-lockup" href="#top" aria-label="回到日禾田首頁">
+      <span class="brand-mark" aria-hidden="true">☀</span>
+      <span><strong>日禾田</strong><small>一口好田，日日有光</small></span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">選單</button>
+    <nav id="main-nav" class="main-nav" aria-label="主要導覽">
+      <a href="#products">好田選物</a>
+      <a href="#story">品牌故事</a>
+      <a href="#film">品牌短片</a>
+      <a href="#quiz">找你的好田味</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">TAIWAN FARM · EVERYDAY GOODNESS</p>
+        <h1>把一季好收成，<br><em>帶回家。</em></h1>
+        <p class="hero-lead">日禾田把陽光、土地與農人的用心，放進每一份日常。從產地出發，選一份讓自己安心、也讓土地喘口氣的好味道。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#products">探索好田選物 <span>↘</span></a>
+          <a class="text-link" href="#story">認識我們的故事</a>
+        </div>
+        <div class="hero-values" aria-label="品牌價值">
+          <span><b>01</b>陽光滋養</span><span><b>02</b>健康純粹</span><span><b>03</b>友善環境</span>
+        </div>
+        <button class="mascot-talk" id="mascot-talk" type="button">和小禾打招呼 <span>↗</span></button>
+        <p class="mascot-message" id="mascot-message" role="status" hidden></p>
+      </div>
+      <div class="hero-visual">
+        <div class="sun-disc"></div>
+        <div class="hero-image-wrap"><img src="日禾田-品牌視覺提案.png" alt="日禾田米、茶與果乾的環保包裝視覺提案" /></div>
+        <div class="mascot-intro"><img src="日禾田-吉祥物.png" alt="日禾田吉祥物，一個戴著葉芽、手拿葉片的可愛稻米公仔" /><span>嗨！我是小禾<br><small>陪你一起吃好田</small></span></div>
+        <p class="stamp">FROM<br>GOOD<br>LAND</p>
+      </div>
+    </section>
+
+    <section id="products" class="section-shell products-section">
+      <div class="section-heading">
+        <div><p class="eyebrow">OUR HARVEST</p><h2>好田選物</h2></div>
+        <p>先從一份熟悉的味道開始，<br>慢慢認識土地的個性。</p>
+      </div>
+      <div class="product-layout">
+        <div class="product-list" role="tablist" aria-label="產品選擇">
+          <button class="product-tab is-active" type="button" role="tab" aria-selected="true" data-product="rice"><span>01</span><strong>台灣良質米</strong><small>友善耕作・自然天成</small></button>
+          <button class="product-tab" type="button" role="tab" aria-selected="false" data-product="tea"><span>02</span><strong>台灣高山茶</strong><small>清香回甘・自然限時</small></button>
+          <button class="product-tab" type="button" role="tab" aria-selected="false" data-product="fruit"><span>03</span><strong>台灣天然果乾</strong><small>無添加・純粹果味</small></button>
+        </div>
+        <article class="product-detail" aria-live="polite">
+          <div class="product-number">01 / 03</div>
+          <div class="product-art rice-art" aria-hidden="true"><span>禾</span><i></i><i></i><i></i></div>
+          <div><p class="eyebrow" id="product-kicker">日常主食</p><h3 id="product-title">台灣良質米</h3><p id="product-description">粒粒飽滿、口感清爽，適合成為每天餐桌上的安心主角。實際產地與米種，請依購買商品包裝標示為準。</p><p class="product-note" id="product-note">建議情境：一家人的日常晚餐</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="impact-section section-shell">
+      <div class="impact-heading"><p class="eyebrow">OUR GENTLE PROMISE</p><h2>一份選擇，<br><em>三個好影響。</em></h2><p>點選下方圖示，看看日禾田想把什麼留給下一季。</p></div>
+      <div class="impact-interaction"><div class="impact-tabs" role="tablist" aria-label="日禾田友善承諾"><button type="button" class="impact-tab is-active" data-impact="land" role="tab" aria-selected="true">土地</button><button type="button" class="impact-tab" data-impact="farmers" role="tab" aria-selected="false">農人</button><button type="button" class="impact-tab" data-impact="daily" role="tab" aria-selected="false">日常</button></div><div class="impact-panel" id="impact-panel"><span class="impact-icon">◒</span><div><h3>讓土地慢慢恢復元氣</h3><p>從減少不必要的包裝開始，讓每一次選擇都更靠近友善環境。</p></div></div></div>
+    </section>
+
+    <section id="story" class="story-section">
+      <div class="section-shell story-grid">
+        <div class="story-photo"><img src="日禾田-品牌視覺提案.png" alt="日禾田品牌包裝與田野插畫" /><span>LAND<br>TO<br>TABLE</span></div>
+        <div class="story-copy"><p class="eyebrow">THE STORY OF 日禾田</p><h2>看得見產地，<br><em>吃得到陽光。</em></h2><p>我們相信，一份好的農產品不只是味道好，也應該讓人知道它從哪裡來、由誰照顧，最後又會留下什麼。</p><p>日禾田以台灣農作為起點，和在地生產者一起，把自然熟成的好風味分享給重視生活品質、關心環境，也願意支持小農的你。</p><div class="story-signature">日禾田 <small>GOOD FOOD · GOOD LAND</small></div></div>
+      </div>
+    </section>
+
+    <section id="film" class="film-section section-shell">
+      <div class="film-heading"><p class="eyebrow">A LITTLE LIGHT</p><h2>小禾的品牌日記</h2><p>讓陽光、土地與一點點可愛，陪你認識日禾田。</p></div>
+      <div class="film-frame"><video controls playsinline preload="metadata" poster="日禾田-品牌視覺提案.png"><source src="日禾田-小禾品牌短片.webm" type="video/webm" />你的瀏覽器目前不支援影片播放。</video><span class="film-label">日禾田 × 小禾</span></div>
+    </section>
+
+    <section id="quiz" class="quiz-section section-shell">
+      <div class="quiz-intro"><p class="eyebrow">A LITTLE FARM QUIZ</p><h2>今天，想吃哪一種好田味？</h2><p>選一個最接近你現在心情的答案，看看日禾田為你推薦哪份日常。</p></div>
+      <div class="quiz-card">
+        <p class="quiz-question" id="quiz-question">今天的你，比較想要？</p>
+        <div class="quiz-options" id="quiz-options">
+          <button type="button" data-answer="rice">一碗熱騰騰的安心日常</button>
+          <button type="button" data-answer="tea">一段慢下來的清香時光</button>
+          <button type="button" data-answer="fruit">一口自然的酸甜活力</button>
+        </div>
+        <div class="quiz-result" id="quiz-result" hidden></div>
+        <button class="reset-button" type="button" id="quiz-reset" hidden>重新選一次</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div><strong>日禾田</strong><span>一口好田，日日有光</span></div><p>本網站為「多媒體與人工智慧科技的應用與實作」課程品牌展示作品。產品資訊以實際包裝與產地資料為準。</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
